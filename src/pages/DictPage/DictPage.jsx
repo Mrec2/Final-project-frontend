@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DictAxios from "../../services/dictAxios";
 import "./DictPage.css"
+import { Table } from "../../components/Table/Table";
 
 
 const DictPage = () => {
@@ -19,12 +20,15 @@ const DictPage = () => {
 
     }, []);
 
+
     return (
-        <div>
+        <div className="dictPage">
             {
-                wordList.map(({ word_py, _id }) => {
-                    return <p key={_id}>{word_py}</p>
-                })
+
+                <Table words={wordList} />
+                // wordList.map(({ word_py, _id }) => {
+                //     return <p key={_id}>{word_py}</p>
+                // })
             }
         </div>
     )

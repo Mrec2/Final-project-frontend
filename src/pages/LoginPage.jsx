@@ -1,7 +1,10 @@
+import FormUser from "../components/FormUser/FormUser"
 
 const LoginPage = () => {
     return (
-        <div>LoginPage</div>
+        <div>
+            <FormUser />
+        </div>
     )
 }
 
