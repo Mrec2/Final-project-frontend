@@ -1,0 +1,29 @@
+.backgroundHomepage {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+
+    background-color: rgb(255, 255, 255);
+}
+
+.selectContainer {
+    width: 15%;
+    height: auto;
+    margin: auto;
+}
+
+.flags {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.flags img {
+
+    width: 100px;
+    height: auto;
+}

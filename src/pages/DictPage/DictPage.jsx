@@ -1,18 +1,32 @@
 import { useEffect, useState } from "react";
-import DictAxios from "../../services/dictAxios";
+import WordAxios from "../../services/dictAxios";
 import "./DictPage.css"
+import { useNavigate, useParams } from "react-router-dom";
 import { Table } from "../../components/Table/Table";
 
 
 const DictPage = () => {
 
     const [wordList, setWordList] = useState([]);
+    const navigate = new useNavigate();
 
-    const dictAxios = new DictAxios();
+    const deleteWord = (id) => {
+
+        WordAxios
+            .deleteWord(id)
+            .then(() => {
+
+                navigate(0);
+            })
+    }
+
+
+
+
 
     useEffect(() => {
 
-        dictAxios
+        WordAxios
             .getAllWords()
             .then(words => setWordList(words))
             .catch(err => console.log(err))
@@ -24,12 +38,8 @@ const DictPage = () => {
     return (
         <div className="dictPage">
             {
-
-                <Table words={wordList} />
-                // wordList.map(({ word_py, _id }) => {
-                //     return <p key={_id}>{word_py}</p>
-                // })
             }
+            <Table words={wordList} deleteWord={deleteWord} />
         </div>
     )
 }

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.pyContent {
+
+    margin: 15px auto;
+}
+
+.yoQueSe h3 {
+
+    color: blue;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.yoQueSe p {
+
+    text-align: left;
+}
+
+.yoQueSe h2 {
+
+    text-align: left;
+}
+
+.yoQueSe ul li {
+
+    text-align: left;
+}
+
+.yoQueSe article {
+
+    margin: 5px 0 50px 0;
+}
+
+.yoQueSe img {
+
+    margin-top: 20px;
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap');
+
+.userLogo {
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.navbarCont {
+
+    font-family: "Qwitcher Grypen";
+    font-size: 35px;
+}
+
+.homeLink {
+    font-size: 40px;
+}

@@ -1,10 +1,19 @@
 import "./Table.css"
+import { useNavigate, useParams } from "react-router-dom";
 
-export const Table = ({ words }) => {
+export const Table = ({ words }, deleteWord) => {
+    console.log("que es esto" + deleteWord);
+
+
+    const navigate = new useNavigate();
+    const routeChange = (id) => {
+
+        navigate(`/update_word/${id}`);
+    }
     console.log(words);
     return (
-        <div>
-            <table className="table">
+        <div className="tableCont">
+            <table className="table table-hover table-bordered border-primary">
                 <thead>
                     <tr>
                         <th scope="col">nº</th>
@@ -15,14 +24,17 @@ export const Table = ({ words }) => {
                 </thead>
                 <tbody>
                     {
-                        words.map(({ word_py, word_en, word_es }, _id) => {
+                        words.map(({ word_py, word_en, word_es, _id }, index) => {
                             return (
-                                <tr>
-                                    <th scope="row">{_id + 1}</th>
+                                <tr key={_id}>
+                                    <th scope="row">{index + 1}</th>
                                     <td>{word_es}</td>
                                     <td>{word_py}</td>
                                     <td>{word_en}</td>
+                                    <button onClick={() => routeChange(_id)}>Edit</button>
+                                    <button onClick={() => deleteWord(_id)}>Delete</button>
                                 </tr>)
+
 
                         })
                     }

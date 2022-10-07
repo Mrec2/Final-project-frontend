@@ -10,20 +10,20 @@ class WordAxios extends InitAxios {
     }
 
     getOneWordById(id) {
-        return this.axios.get(`/${id}`).then((response) => response.data);
+        return this.axios.get(`/word/${id}`).then((response) => response.data);
     }
 
     createWord(body) {
-        return this.axios.post('/', body).then((response) => response.data);
+        return this.axios.post('/addwords', body).then((response) => response.data);
     }
 
     updateWord(id, body) {
-        return this.axios.put(`/${id}`, body).then((response) => response.data);
+        return this.axios.put(`/${id}/edit`, body).then((response) => response.data);
     }
 
     deleteWord(id) {
-        return this.axios.delete(`/${id}`).then((response) => response.data);
+        return this.axios.delete(`/${id}/delete`).then((response) => response.data);
     }
 }
 
-export default WordAxios;
+export default new WordAxios();
