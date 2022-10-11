@@ -13,10 +13,10 @@ const DictPage = () => {
     const deleteWord = (id) => {
 
         WordAxios
+
             .deleteWord(id)
             .then(() => {
-
-                navigate(0);
+                navigate(0)
             })
     }
 

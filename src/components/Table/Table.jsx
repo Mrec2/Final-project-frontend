@@ -1,8 +1,9 @@
 import "./Table.css"
 import { useNavigate, useParams } from "react-router-dom";
 
-export const Table = ({ words }, deleteWord) => {
+export const Table = ({ words, deleteWord }) => {
     console.log("que es esto" + deleteWord);
+
 
 
     const navigate = new useNavigate();
